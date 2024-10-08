@@ -1,0 +1,18 @@
+[package]
+name = "project_example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[[bin]]
+name = "binary1"
+path = "src/bin/binary1.rs"
+
+[[bin]]
+name = "binary2"
+path = "src/bin/binary2.rs"
