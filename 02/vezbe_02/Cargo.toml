@@ -1,0 +1,71 @@
+[package]
+name = "vezbe_02"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[bin]]
+name = "01_standard"
+path = "src/bin/01_standard.rs"
+
+[[bin]]
+name = "z01_temperature"
+path = "src/bin/z01_temperature.rs"
+
+[[bin]]
+name = "02_variables"
+path = "src/bin/02_variables.rs"
+
+[[bin]]
+name = "03_constants"
+path = "src/bin/03_constants.rs"
+    
+    [[bin]]
+name = "04_shadowing"
+path = "src/bin/04_shadowing.rs"
+
+[[bin]]
+name = "05_stdin"
+path = "src/bin/05_stdin.rs"
+
+[[bin]]
+name = "06_tuple"
+path = "src/bin/06_tuple.rs"
+
+[[bin]]
+name = "07_array"
+path = "src/bin/07_array.rs"
+
+[[bin]]
+name = "08_array_traits"
+path = "src/bin/08_array_traits.rs"
+
+[[bin]]
+name = "09_functions"
+path = "src/bin/09_functions.rs"
+
+[[bin]]
+name = "10_if"
+path = "src/bin/10_if.rs"
+
+[[bin]]
+name = "11_loop"
+path = "src/bin/11_loop.rs"
+
+[[bin]]
+name = "12_while"
+path = "src/bin/12_while.rs"
+
+[[bin]]
+name = "13_for"
+path = "src/bin/13_for.rs"
+
+[[bin]]
+name = "14_vector"
+path = "src/bin/14_vector.rs"
+
+[[bin]]
+name = "15_hashmap"
+path = "src/bin/15_hashmap.rs"
+

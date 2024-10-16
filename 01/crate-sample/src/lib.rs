@@ -1,6 +1,6 @@
-// lib.rs predstavlja korenski modul biblioteke, odnosno crate-a
+// lib.rs represents the root of the module tree of a crate
 mod example {
-    // Ukoliko bi se ovde koristio pub mod, umesto dole pub use, poznavala bi se struktura modula, odnosno bilo bi moguće pozivati funkcije iz modula sa crate_sample::example::add_one
+    // If pub mod was used here, instead of pub use below, the structure of the module would be known, i.e. it would be possible to call functions from the module with crate_sample::example::add_one
     /// Adds one to the number given.
     ///
     /// # Examples
@@ -35,5 +35,5 @@ mod example2 {
     }
 }
 
-pub use example::add_one; // Ovako se funkcija iz modula može koristiti izvan modula, na način da se poziva sa crate_sample::add_one, odnosno da se ne poznaje struktura modula
+pub use example::add_one; // This way, the function from the module can be used outside the module, by calling it with crate_sample::add_one, i.e. without knowing the structure of the module
 pub use example2::add_any;
