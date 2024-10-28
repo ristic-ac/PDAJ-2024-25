@@ -1,3 +1,6 @@
+// x and y can be of different types
+// Although, now structure signature has two generic types T and U
+// The type of x and y is defined when the structure is created
 #[derive(Debug)]
 struct Point<T, U> {
     x: T,

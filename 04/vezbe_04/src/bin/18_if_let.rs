@@ -13,22 +13,34 @@ enum Coin {
 }
 
 fn main() {
-    let coin = Coin::Penny;
+    let penny = Coin::Penny;
+    let quarter = Coin::Quarter(UsState::Alaska);
     let mut count = 0;
 
-    match &coin {
+    match &penny {
         Coin::Quarter(state) => println!("State quarter from {state:?}!"),
         _ => count += 1,
     }
 
-    if let Coin::Quarter(state) = &coin {
+    if let Coin::Quarter(state) = &penny {
         println!("State quarter from {state:?}!");
     } else {
         count += 1;
     }
 
-    if let Coin::Quarter(state) = coin {
+    if let Coin::Quarter(state) = penny {
         println!("State quarter from {state:?}!");
     } 
+
+    if let Coin::Quarter(state) = quarter {
+        if let UsState::Alaska = state {
+            println!("State quarter from Alaska!");
+        } else {
+            count += 1;
+        }
+    } else {
+        count += 1;
+    }
+    // println!("Quarter: {:?}", quarter);
     println!("Count: {}", count);
 }

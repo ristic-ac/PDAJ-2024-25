@@ -64,12 +64,12 @@ fn demonstrate_borrowing_2() {
         Some(String::from("Hello world"));
     
     match opt {
-        Some(ref value) => println!("{}", value),   // Because placeholder is used, opt@Some.0 is not consumed
+        Some(ref value) => println!("{}", value),   // Because ref is used, opt@Some.0 is not consumed
         None => println!("None!")
     };
 
-    match &opt {
-        Some(ref value) => println!("{}", value),   // Because placeholder is used, opt@Some.0 is not consumed
+    match opt {
+        Some(ref value) => println!("{}", value),   // Because ref is used, opt@Some.0 is not consumed
         None => println!("None!")
     };
 

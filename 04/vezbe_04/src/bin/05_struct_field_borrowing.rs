@@ -13,6 +13,7 @@ fn main() {
     // - `p` is partially restricted: cannot be accessed immutably because of the mutable borrow on `p.x`.
     // - `p.y` is unaffected; we can still access it independently.
 
+    // This will not work:
     // let p_ref = &p;  // Immutable borrow on `p`
     // println!("p.x is not accessible: {}", p.x);  // `p.x` is not accessible 
 

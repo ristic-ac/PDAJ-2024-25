@@ -1,5 +1,5 @@
 // Automatically implement the Debug trait for AlwaysEqual, allowing it to be printed with {:?}
-#[derive(Debug)]
+#[derive(Debug, Eq)]
 struct AlwaysEqual;
 
 // Implement the PartialEq trait for AlwaysEqual, allowing comparison with `==`
@@ -13,6 +13,10 @@ impl PartialEq for AlwaysEqual {
         true
     }
 }
+
+// Eq has no methods to implement, but you must implement PartialEq to use Eq
+// Also, for Eq to be correct, Reflexivity, Symmetry, and Transitivity of eq must be satisfied
+// Eq just makes guarantees about the RST behavior of PartialEq, allowing use of HashSet and HashMap
 
 fn main() {
     let subject1 = AlwaysEqual; // Create an instance of AlwaysEqual
@@ -42,5 +46,34 @@ fn main() {
     } else {
         // Since `ne` always returns false, this branch will always execute
         println!("subject1 is always equal to subject2");
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_reflexivity() {
+        let a = AlwaysEqual;
+        assert_eq!(a, a); // Reflexivity: a == a should be true
+    }
+
+    #[test]
+    fn test_symmetry() {
+        let a = AlwaysEqual;
+        let b = AlwaysEqual;
+        assert_eq!(a, b); // Symmetry: a == b
+        assert_eq!(b, a); // b == a should also be true
+    }
+
+    #[test]
+    fn test_transitivity() {
+        let a = AlwaysEqual;
+        let b = AlwaysEqual;
+        let c = AlwaysEqual;
+        assert_eq!(a, b); // a == b
+        assert_eq!(b, c); // b == c
+        assert_eq!(a, c); // a == c (transitivity)
     }
 }

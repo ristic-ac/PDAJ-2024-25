@@ -1,3 +1,4 @@
+// Enums can have multiple types of data
 enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -5,6 +6,7 @@ enum Message {
     ChangeColor(i32, i32, i32),
 }
 
+// Implement a method for the enum
 impl Message {
     fn call(&self) {
         match self {
@@ -23,10 +25,13 @@ fn main() {
 
     let m = Message::Move { x: 1, y: 2 };
     m.call();
+    m.call();
 
     let m = Message::ChangeColor(255, 0, 0);
     m.call();
+    m.call();
 
     let m = Message::Quit;
+    m.call();
     m.call();
 }
