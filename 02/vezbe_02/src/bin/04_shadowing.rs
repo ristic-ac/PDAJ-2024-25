@@ -3,7 +3,7 @@ fn main() {
     println!("x: {}, address: {:p}", x, &x);
 
     let x = x + 1;
-    println!("x: {}, address: {:p}", x, &x);
+    println!("x before again in scope: {}, address: {:p}", x, &x);
 
     {
         let x = 3;
@@ -13,6 +13,7 @@ fn main() {
             println!("x: {}, address: {:p}", x, &x);
         }
     }
+    println!("x after again in scope: {}, address: {:p}", x, &x);
 
     let x = x * 2;
     println!("x: {}, address: {:p}", x, &x);
