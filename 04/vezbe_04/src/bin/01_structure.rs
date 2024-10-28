@@ -32,6 +32,10 @@ impl User {
             sign_in_count: 1,
         }
     }
+
+    fn get_email(&self) -> &String {
+        &self.email
+    }
 }
 
 

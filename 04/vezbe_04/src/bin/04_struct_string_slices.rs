@@ -1,3 +1,6 @@
+// This does not compile, because the fields of the struct are references.
+// Resolve this by using the `String` type instead of `&str`
+// Or by using the `lifetime` syntax.
 struct User {
     active: bool,
     username: &str,
