@@ -10,7 +10,6 @@ impl<'a> ImportantExcerpt<'a> {
     }
 
     // Method that takes a reference and returns a reference to a part of the struct.
-    // Lifetime annotations are required here to specify relationships between parameters and return values
     fn announce_and_return_part(&self, announcement: &str) -> &str {
         println!("Attention please: {}", announcement);
         self.part
