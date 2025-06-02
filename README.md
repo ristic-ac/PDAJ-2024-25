@@ -16,4 +16,3 @@
   8. Upravljanje datotekama, SerDe, argumenti komandne linije
   9. Kolokvijum
   10. Multithreading, async/await
-  11. Napredni Rust? OOP u Rust-u?
